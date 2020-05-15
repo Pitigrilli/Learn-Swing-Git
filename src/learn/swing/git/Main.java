@@ -5,6 +5,7 @@
  */
 package learn.swing.git;
 
+import model.Temperature;
 /**
  *
  * @author claus
@@ -16,7 +17,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        new gui.MainWindow();
+        new gui.TemperatureView(new Temperature(20.0));
     }
     
 }
