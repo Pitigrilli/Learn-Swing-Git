@@ -1,5 +1,6 @@
 package gui;
 
+import java.awt.Color;
 import model.Temperature;
 
 public class DesignerFrame extends javax.swing.JFrame {
@@ -23,9 +24,17 @@ public class DesignerFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        group = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         bUp = new javax.swing.JButton();
         bDown = new javax.swing.JButton();
+        gelb = new javax.swing.JRadioButton();
+        grün = new javax.swing.JRadioButton();
+        blau = new javax.swing.JRadioButton();
+
+        group.add(gelb);
+        group.add(grün);
+        group.add(blau);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Temperatur-Fenster");
@@ -47,32 +56,62 @@ public class DesignerFrame extends javax.swing.JFrame {
             }
         });
 
+        gelb.setText("gelb");
+        gelb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gelbActionPerformed(evt);
+            }
+        });
+
+        grün.setText("grün");
+        grün.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                grünActionPerformed(evt);
+            }
+        });
+
+        blau.setText("blau");
+        blau.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                blauActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(90, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(bUp, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(86, 86, 86)
-                        .addComponent(bDown, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(71, 71, 71))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(96, 96, 96))))
+                .addContainerGap(109, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(107, 107, 107))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(blau)
+                    .addComponent(grün)
+                    .addComponent(gelb)
+                    .addComponent(bUp, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(79, 79, 79)
+                .addComponent(bDown, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(113, 113, 113)
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(63, 63, 63)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bUp)
                     .addComponent(bDown))
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addGap(46, 46, 46)
+                .addComponent(gelb)
+                .addGap(18, 18, 18)
+                .addComponent(grün)
+                .addGap(18, 18, 18)
+                .addComponent(blau)
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
         pack();
@@ -90,9 +129,28 @@ public class DesignerFrame extends javax.swing.JFrame {
         updateView();
     }//GEN-LAST:event_bUpActionPerformed
 
+    private void gelbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gelbActionPerformed
+        // TODO add your handling code here:
+        this.getContentPane().setBackground(Color.yellow);
+    }//GEN-LAST:event_gelbActionPerformed
+
+    private void grünActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grünActionPerformed
+        // TODO add your handling code here:
+        this.getContentPane().setBackground(Color.green);
+    }//GEN-LAST:event_grünActionPerformed
+
+    private void blauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blauActionPerformed
+        // TODO add your handling code here:
+        this.getContentPane().setBackground(Color.blue);
+    }//GEN-LAST:event_blauActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bDown;
     private javax.swing.JButton bUp;
+    private javax.swing.JRadioButton blau;
+    private javax.swing.JRadioButton gelb;
+    private javax.swing.ButtonGroup group;
+    private javax.swing.JRadioButton grün;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 
