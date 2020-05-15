@@ -2,9 +2,10 @@ package gui;
 
 import model.Temperature;
 
-
 public class DesignerFrame extends javax.swing.JFrame {
+
     Temperature temperature;
+
     /**
      * Creates new form DesignerFrame
      */
@@ -79,8 +80,8 @@ public class DesignerFrame extends javax.swing.JFrame {
 
     private void bDownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDownActionPerformed
         // TODO add your handling code here:
-                temperature.down();
-                updateView();
+        temperature.down();
+        updateView();
     }//GEN-LAST:event_bDownActionPerformed
 
     private void bUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bUpActionPerformed
@@ -95,7 +96,7 @@ public class DesignerFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 
-public void updateView(){
-    jLabel1.setText(temperature.toString());
-}
+    public void updateView() {
+        jLabel1.setText(temperature.toString());
+    }
 }
